@@ -1,0 +1,95 @@
+<!--By Zyad Mohamed-->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Calculator app</title>
+
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+        background-color: white;
+        padding: 5px;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+    </style>
+
+    <link rel="stylesheet" href="assets/Css/style.css" />
+  </head>
+  <body>
+    <div class="attribution">
+      Challenge by
+      <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        >Frontend Mentor</a
+      >. Coded by <a href="https://github.com/zezoo296">Zyad Mohamed</a>.
+    </div>
+    <div class="content">
+      <div class="calc">
+        <header>
+          <h3>calc</h3>
+          <div class="theme">
+            <p>theme</p>
+            <div class="themes-options">
+              <div class="options">
+                <p class="option-num">1</p>
+                <p class="option-num">2</p>
+                <p class="option-num">3</p>
+              </div>
+
+              <form action="">
+                <input type="radio" id="1" name="theme" value="1" checked />
+                <label for="1"></label>
+
+                <input type="radio" id="2" name="theme" value="2" />
+                <label for="2"> </label>
+
+                <input type="radio" id="3" name="theme" value="3" />
+                <label for="3"> </label>
+                <span class="background"></span>
+              </form>
+            </div>
+          </div>
+        </header>
+
+        <div class="preview"></div>
+
+        <div class="calcBody">
+          <button>7</button>
+          <button>8</button>
+          <button>9</button>
+          <button id="del">DEL</button>
+          <button>4</button>
+          <button>5</button>
+          <button>6</button>
+          <button id="plus">+</button>
+          <button>1</button>
+          <button>2</button>
+          <button>3</button>
+          <button id="minus">-</button>
+          <button>.</button>
+          <button>0</button>
+          <button id="/">/</button>
+          <button id="x">x</button>
+          <button id="reset">RESET</button>
+          <button id="equal">=</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="assets/Js/script.js"></script>
+ </body>
+</html>

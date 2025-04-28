@@ -1,0 +1,181 @@
+:root {
+    --main-color: #3b4664;
+    --text-color: white;
+    --theme-btn-color: #d63c32;
+    --preview-color: #181f32;
+    --calc-body-color: #252d44;
+    --btn-back-color: #eae3db;
+    --btn-shadow-color: #b5a396;
+    --btn-text-color: #414a5b;
+    --del-reset-text-color: white;
+    --del-reset-back-color: #647299;
+    --equal-btn-text-color: white;
+    --equal-btn-back-color: #d13f30;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    background-color: var(--main-color);
+    margin: 0;
+  }
+  
+  .content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: calc(100vh - 50px);
+  }
+  
+  .calc {
+    width: fit-content;
+    margin: 60px auto;
+    color: var(--text-color);
+    transform: scale(120%);
+  }
+  
+  .calc header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .calc header .theme {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+  }
+  
+  .calc header .theme p {
+    text-transform: uppercase;
+    font-size: 12px;
+  }
+  
+  .themes-options {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+  
+  .themes-options .options {
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5px;
+  }
+  
+  .themes-options .options .option-num {
+    width: 15px;
+    text-align: center;
+    font-size: 12px;
+  }
+  
+  form {
+    background-color: var(--calc-body-color);
+    padding: 5px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 60px;
+    height: 14px;
+    margin-bottom: 5px;
+  }
+  
+  input[type="radio"] {
+    display: none;
+  }
+  
+  form label {
+    flex: 1;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1;
+  }
+  
+  form .background {
+    width: 10px;
+    height: 10px;
+    background-color: var(--theme-btn-color);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 5px;
+    transition: left 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  
+  form input[id="1"]:checked ~ .background {
+    left: 5px;
+  }
+  
+  form input[id="2"]:checked ~ .background {
+    left: 23px; /* Adjusted for equal spacing */
+  }
+  
+  form input[id="3"]:checked ~ .background {
+    left: 41px; /* Adjusted for equal spacing */
+  }
+  
+  .preview {
+    background-color: var(--preview-color);
+    height: 50px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    padding: 10px;
+  }
+  
+  .calcBody {
+    background-color: var(--calc-body-color);
+    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    border-radius: 5px;
+  }
+  
+  .calcBody #reset,
+  .calcBody #equal {
+    grid-column: span 2;
+  }
+  
+  .calcBody #equal {
+    background-color: var(--equal-btn-back-color);
+    color: var(--btn-back-color);
+  }
+  
+  .calcBody button:focus{
+    outline: none;
+  }
+
+  .calcBody button {
+    color: var(--btn-text-color);
+    background-color: var(--btn-back-color);
+    border: none;
+    border-radius: 3px;
+    padding: 10px;
+    font-weight: bold;
+    box-shadow: 0 1px 2px var(--btn-shadow-color);
+    transition: all 0.3s;
+  }
+  
+  .calcBody button:hover {
+    cursor: pointer;
+    filter: brightness(1.2);
+  }
+  
+  .calcBody #del,
+  .calcBody #reset {
+    background-color: var(--del-reset-back-color);
+    color: var(--del-reset-text-color);
+    font-weight: 500;
+    font-size: 10px;
+   padding: 8px;
+  }
+  
